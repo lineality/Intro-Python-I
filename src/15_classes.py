@@ -1,9 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 # 15 GGA v1
 # Make a class LatLon that can be passed parameters `lat` and `lon` to the
 # constructor
@@ -52,17 +48,10 @@ class Geocache(Waypoint):
     def __str__(self):
         # using fstring to manage the format of priting
         return f"Name:{self.name}, Difficulty:{self.difficulty}, Size:{self.size}, Latitude:{self.lat}, Longitude:{self.lon}"
-<<<<<<< HEAD
 
     #def __repr__(self)
 
 
-=======
-
-    #def __repr__(self)
-
-
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 # YOUR CODE HERE
 waypoint = Waypoint("Catacombs", 41.70505, -121.51521)

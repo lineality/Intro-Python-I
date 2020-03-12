@@ -51,22 +51,13 @@ print(args)
 month = datetime.now().month
 year = datetime.now().year
 
+
 # set error message
-<<<<<<< HEAD
-error_message = '''error, please use this format (no brakets): 
-'14_cal.py month year' e.g. 14_cal.py 1 2003 '''
-=======
 error_message = "error, please use this format (no brakets): '14_cal.py month year' e.g. 14_cal.py 1 2003 "
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 
+# options:'
 
-# options:
-# 1. user put in invalid arguments
-<<<<<<< HEAD
 # 2. user put in no arguments (still valid)
-=======
-# 2. user put in no arguments
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 # 3. user puts in one argument (month)
 # 4. user puts in two arguments (month, year)
 
@@ -80,13 +71,9 @@ error_message = "error, please use this format (no brakets): '14_cal.py month ye
 if len(args) > 3:
     print (error_message)
 
-<<<<<<< HEAD
 
 # 2 if there are no agruments (still valid), 
 # make a default current calendar
-=======
-# 2 if there are no agruments (still valid), make a default current calendar
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 elif len(args) == 1:
     # use build in function to make printed calendar
     tc = calendar.TextCalendar()
@@ -94,21 +81,14 @@ elif len(args) == 1:
     print(tc.prmonth(year, month))
 
 
-<<<<<<< HEAD
 # for the next 2 options: #3 and #4
-=======
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 # if 1 or 2 argeuments, check that month is in range
 # if month input is out of the proper range
 elif (int(args[1]) < 1) or (int(args[1]) > 12):
     print (error_message)
 
 
-<<<<<<< HEAD
 # 3. if there is one argument (valid month):
-=======
-# if there is one argument (valid month):
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 # make a calendar with new month value
 elif len(args) == 2:
     month = int(args[1])
@@ -117,12 +97,8 @@ elif len(args) == 2:
     # Print calendar for default month and year
     print(tc.prmonth(year, month))
 
-<<<<<<< HEAD
 
 # 4. if two arguments, use those values for year and month
-=======
-# if two arguments, use those values for year and month
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
 elif len(args) == 3:
     # set the user values to the variables that go into the calendar
     month = int(args[1])
@@ -132,17 +108,7 @@ elif len(args) == 3:
     # Print calendar for default month and year
     print(tc.prmonth(year, month))
 
-<<<<<<< HEAD
 
 # if something else happens, default to the error message
 else:
     print (error_message)
-=======
-else:
-    print (error_message)
-
-
-
-
-
->>>>>>> 4db716440b0f14b6b469f5037de30829f3a84f27
