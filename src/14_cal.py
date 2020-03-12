@@ -1,5 +1,6 @@
+
 # 14
-# GGA
+# GGA v2
 # 
 # to do: figure out how to have input parameters into a .py file...
 # 
@@ -50,31 +51,62 @@ print(args)
 month = datetime.now().month
 year = datetime.now().year
 
-# Q: the first argument is the function itself?
+# set error message
+error_message = "error, please use this format (no brakets): '14_cal.py month year' e.g. 14_cal.py 1 2003 "
 
+
+# options:
+# 1. user put in invalid arguments
+# 2. user put in no arguments
+# 3. user puts in one argument (month)
+# 4. user puts in two arguments (month, year)
 
 # check to see how many inputs
-if (len(args) > 3) or (len(args) == 1):
+# note: the first arguemnt is the python program file name itself
+# if user put in only one argumeent
+# then 
+
+
+# 1. if user put in invalid arguments
+if len(args) > 3:
+    print (error_message)
+
+# 2 if there are no agruments (still valid), make a default current calendar
+elif len(args) == 1:
     # use build in function to make printed calendar
     tc = calendar.TextCalendar()
     # Print calendar for default month and year
     print(tc.prmonth(year, month))
-    if len(args) > 3:
-        print ("error, please use this format (no brakets): '14_cal.py month year'")
+
+
+# if 1 or 2 argeuments, check that month is in range
+# if month input is out of the proper range
+elif (int(args[1]) < 1) or (int(args[1]) > 12):
+    print (error_message)
+
+
+# if there is one argument (valid month):
+# make a calendar with new month value
+elif len(args) == 2:
+    month = int(args[1])
+    # use build in function to make printed calendar
+    tc = calendar.TextCalendar()
+    # Print calendar for default month and year
+    print(tc.prmonth(year, month))
+
+# if two arguments, use those values for year and month
+elif len(args) == 3:
+    # set the user values to the variables that go into the calendar
+    month = int(args[1])
+    year = int(args[2])
+    # use build in function to make printed calendar
+    tc = calendar.TextCalendar()
+    # Print calendar for default month and year
+    print(tc.prmonth(year, month))
 
 else:
-    month_test = int(args[1])
-    print("type is", type(month_test))
-    if (month_test < 1) or (month_test > 12):
-        print ("error, please use this format (no brakets): '14_cal.py month year'")
-        
-    else:
-        month = int(args[1])
-        year = int(args[2])
-        # use build in function to make printed calendar
-        tc = calendar.TextCalendar()
-        # Print calendar for default month and year
-        print(tc.prmonth(year, month))
+    print (error_message)
+
 
 
 
