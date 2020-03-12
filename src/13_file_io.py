@@ -32,13 +32,16 @@ print (file_contents)
 # make file
 fil2 = open("bar.txt", "x")
 
+# write to file
 fil2.write("This file \nis not \na pipe, nor a promise.||")
+
+# close file
 fil2.close()
 
-#open file
+# open file
 file2 = open('bar.txt', 'r')
 
-#read file
+# read file
 file_contents2 = file2.read()
 
 # print file

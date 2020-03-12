@@ -13,7 +13,8 @@ import sys
 
 # Print out the command line arguments in sys.argv, one per line:
 for arg in sys.argv:
-   print ("list of command line arguments passed to a Python script:", sys.argv)
+   #print ("list of command line arguments passed to a Python script:", sys.argv)
+   print ("list of command line arguments passed to a Python script:", arg)
 
 
 # Print out the OS platform you're using:
